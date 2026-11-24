@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "CI/CD Starter",
-    "slug": "cicd-starter",
+    "name": "Lotties App",
+    "slug": "lotties-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.lecture.cicdstarter"
+      "bundleIdentifier": "io.github.manolinholland02.lotties-app"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +18,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "dev.lecture.cicdstarter"
+      "package": "io.github.manolinholland02.lotties_app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
