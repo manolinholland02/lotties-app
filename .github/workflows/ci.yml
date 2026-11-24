@@ -1,0 +1,32 @@
+# Continuous integration: check every pull request automatically.
+name: CI
+
+on:
+  pull_request:          # every pull request, and every new push to it
+  push:
+    branches: [main]     # and every push to main
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v7
+
+      - name: Install Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Unit and component tests
+        run: npm test -- --ci
